@@ -281,36 +281,35 @@ def download_audio_from_url(video_url):
             output_path = os.path.join(temp_dir, "audio")
             
             ydl_opts = {
-                'format': 'bestaudio/best',
-                'postprocessors': [{
-                    'key': 'FFmpegExtractAudio',
-                    'preferredcodec': 'mp3',
-                    'preferredquality': '192',
-                }],
+                'format': 'worst[ext=mp4]/worst',
                 'outtmpl': f'{output_path}.%(ext)s',
                 'quiet': True,
                 'no_warnings': True,
+                'extract_flat': False,
             }
             
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([video_url])
             
             # Find the downloaded file
-            audio_file = f"{output_path}.mp3"
-            if os.path.exists(audio_file):
-                # Read the file content
-                with open(audio_file, 'rb') as f:
-                    audio_content = f.read()
-                return audio_content, "audio.mp3"
-            else:
-                raise Exception("Audio file not found after download")
+            for file in os.listdir(temp_dir):
+                if file.startswith("audio."):
+                    audio_file = os.path.join(temp_dir, file)
+                    with open(audio_file, 'rb') as f:
+                        audio_content = f.read()
+                    return audio_content, file
+            
+            raise Exception("Audio file not found after download")
                 
     except Exception as e:
         raise Exception(f"Download failed: {str(e)}")
 
 def transcribe_audio(audio_content, filename):
     """Transcribe audio using Whisper."""
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.mp3') as temp_file:
+    # Get file extension from filename
+    file_ext = os.path.splitext(filename)[1] or '.m4a'
+    
+    with tempfile.NamedTemporaryFile(delete=False, suffix=file_ext) as temp_file:
         temp_file.write(audio_content)
         temp_file_path = temp_file.name
     
