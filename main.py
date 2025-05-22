@@ -3,7 +3,6 @@ import os
 import tempfile
 import yt_dlp
 from faster_whisper import WhisperModel
-import torch
 import librosa
 import numpy as np
 import warnings
