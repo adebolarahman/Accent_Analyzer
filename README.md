@@ -18,7 +18,7 @@ An intelligent tool that analyzes English accents from video content, providing 
 
 ## 🚀 Live Demo
 
-Try the app: [Accent Analyzer](https://accentanalyzer-nbwygpiyzopo5mkp3geaxl.streamlit.app/)
+Try the app: [Accent Analyzer](???
 
 ## 🛠️ Technology Stack
 
@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Adebola Rahman**
 
 - GitHub: [@adebolarahman](https://github.com/adebolarahman)
-- LinkedIn: [Connect with me](https://linkedin.com/in/adebolarahman)
+- LinkedIn: https://www.linkedin.com/in/abdulrahman-iyaniwura-7a855812a/
 
 ## 🙏 Acknowledgments
 
