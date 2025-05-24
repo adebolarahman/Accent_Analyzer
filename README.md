@@ -4,8 +4,7 @@
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://accentanalyzer-nbwygpiyzopo5mkp3geaxl.streamlit.app/)
 
-An intelligent tool that analyzes English accents from video content, providing automated assessment capabilities for hiring and language evaluation purposes.
-
+An intelligent tool that analyzes English accents from video content, providing automated assessment capabilities.
 ## 🌟 Features
 
 - **Video Input**: Supports YouTube, Vimeo, and direct video links
