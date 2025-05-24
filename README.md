@@ -13,11 +13,6 @@ An intelligent tool that analyzes English accents from video content, providing 
 - **English Proficiency**: Provides confidence scores and proficiency percentages
 - **Real-time Processing**: Live progress tracking with step-by-step feedback
 - **Exportable Results**: Download detailed analysis reports
-
-## 🚀 Live Demo
-
-Try the app: [Accent Analyzer](???
-
 ## 🛠️ Technology Stack
 
 - **Frontend**: Streamlit
