@@ -1,4 +1,3 @@
-# Accent_Analyzer
 
 # 🎤 Accent Analyzer
 
